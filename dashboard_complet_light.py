@@ -9,8 +9,8 @@ import streamlit as st
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Chargement des fichiers
-path_df_train_url = "https://github.com/AnaisChapon/dashboard_ocr7/blob/a4552c8b539cfdcb140a9f7e64cf7f770f667465/application_test_light.csv"
-path_definition_features_df_url = "https://github.com/AnaisChapon/dashboard_ocr7/blob/a4552c8b539cfdcb140a9f7e64cf7f770f667465/definition_features.csv"
+path_df_train_url = "https://raw.githubusercontent.com/AnaisChapon/dashboard_ocr7/refs/heads/main/application_test_light.csv"
+path_definition_features_df_url = "https://raw.githubusercontent.com/AnaisChapon/dashboard_ocr7/refs/heads/main/definition_features.csv"
 
 definition_features_df = pd.read_csv(path_definition_features_df_url)
 df_train = pd.read_csv(path_df_train_url, low_memory=True)
