@@ -4,6 +4,9 @@ import pandas as pd
 import plotly.graph_objects as go
 import requests
 import streamlit as st
+import logging
+from streamlit.runtime.scriptrunner.script_run_context import SCRIPT_RUN_CONTEXT_ATTR_NAME
+logging.basicConfig(level=logging.DEBUG)
 
 # Obtenez le répertoire courant du script
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -16,8 +19,8 @@ path_df_train = os.path.join(current_directory, "application_test_light.csv")
 
 #definition_features_df = pd.read_csv(path_definition_features_df_url)
 #df_train = pd.read_csv(path_df_train_url, low_memory=True)
-df_train = pd.read_csv(path_df_train)
-definition_features_df = pd.read_csv(path_definition_features_df)
+df_train = pd.read_csv(path_df_train, encoding="utf-8")
+definition_features_df = pd.read_csv(path_definition_features_df, encoding="utf-8")
 
 st.set_page_config(layout="wide")
 
