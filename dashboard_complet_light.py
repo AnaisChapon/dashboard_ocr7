@@ -15,7 +15,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 #path_df_train_url = "https://raw.githubusercontent.com/AnaisChapon/dashboard_ocr7/refs/heads/main/application_train_light_light.csv"
 #path_definition_features_df_url = "https://raw.githubusercontent.com/AnaisChapon/dashboard_ocr7/refs/heads/main/definition_features.csv"
 path_definition_features_df = os.path.join(current_directory, "definition_features.csv")
-path_df_train = os.path.join(current_directory, "application_test_light.csv")
+path_df_train = os.path.join(current_directory, "application_train_light_light.csv")
 
 #definition_features_df = pd.read_csv(path_definition_features_df_url)
 #df_train = pd.read_csv(path_df_train_url, low_memory=True)
