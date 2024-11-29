@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Charger le modèle
-model_path = '/home/achapon/OpenClassRoom_Data-Scientist_Projet-7/CHAPON_Anais_2_dossier_code_102024/Notebooks/mlflow_model_complet_light/model.pkl'
+model_path = '/home/achapon/dashboard_ocr7/model.pkl'
 model = joblib.load(model_path)
 
 @app.route("/predict", methods=['POST'])
@@ -18,7 +18,7 @@ def predict():
         print("Received SK_ID_CURR:", sk_id_curr)
 
         # Charger le dataset complet pour obtenir les données de fond
-        csv_path = '/home/achapon/OpenClassRoom_Data-Scientist_Projet-7/CHAPON_Anais_2_dossier_code_102024/application_train_light.csv'
+        csv_path = '/home/achapon/dashboard_ocr7/application_train_light_light.csv'
         df = pd.read_csv(csv_path)
         print("DataFrame loaded successfully.")
 
