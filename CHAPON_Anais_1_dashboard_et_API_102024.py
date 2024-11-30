@@ -3,7 +3,7 @@ import os
 
 # Définir le port pour l'API Flask et le dashboard Streamlit
 api_port = "5000"
-dashboard_port = "8000"
+dashboard_port = "8001"
 
 # Lancer l'API Flask
 api_process = subprocess.Popen(["python", "api_complet_light.py"], env=dict(os.environ, PORT=api_port))
