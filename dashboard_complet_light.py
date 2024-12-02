@@ -237,7 +237,8 @@ if col1.button("Run") or state["data_received"]:
         state["last_sk_id_curr"] = sk_id_curr
 
     if not state["data_received"]:
-        response = requests.post("https://api-ocr7-61ae8bbb845d.herokuapp.com/", json={"SK_ID_CURR": int(sk_id_curr)})
+        response = requests.post("https://api-ocr7-61ae8bbb845d.herokuapp.com/predict
+", json={"SK_ID_CURR": int(sk_id_curr)})
         if response.status_code != 200:
             st.error(f"Erreur lors de l'appel à l'API: {response.status_code}")
             st.stop()
